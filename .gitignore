@@ -1,0 +1,34 @@
+# Node.js dependencies
+node_modules/
+
+# Environment variables / secrets
+.env
+.env.*
+
+# Logs
+*.log
+npm-debug.log*
+
+# OS files
+.DS_Store
+
+# IDE / Editor
+.vscode/
+.idea/
+
+# Test coverage
+coverage/
+
+# Build output
+dist/
+build/
+
+# Terraform (si tu en ajoutes)
+.terraform/
+*.tfstate
+*.tfstate.*
+.terraform.lock.hcl
+
+# Private keys
+*.pem
+*.key

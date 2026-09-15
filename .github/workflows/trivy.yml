@@ -1,0 +1,21 @@
+name: Trivy scan
+
+on:
+  push:
+    branches: [main]
+
+jobs:
+  runs-on: ubuntu-latest
+  steps: 
+
+  - uses: actions/checkout@v4
+
+  - name: Build Docker Image
+    run: docker build -t python-image:v${{ github.run_number}} . 
+
+  - name: Trivy scan
+    uses: aquasecurity/trivy-action@master
+    with:
+      image-ref: python-image:v${{ github.run_number}}
+      exit-code: '1'
+      severity: HGIH, CRITICAL
