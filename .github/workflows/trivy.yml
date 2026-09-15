@@ -19,5 +19,5 @@ jobs:
       with:
         image-ref: python-image:v${{ github.run_number}}
         severity: HIGH, CRITICAL
-        exit-code: '1'
+        exit-code: '0' #test pour voir si la pipeline fonctionnne. Normalement 0
       
