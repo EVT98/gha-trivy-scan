@@ -17,5 +17,6 @@ jobs:
     uses: aquasecurity/trivy-action@master
     with:
       image-ref: python-image:v${{ github.run_number}}
+      severity: HIGH, CRITICAL
       exit-code: '1'
-      severity: HGIH, CRITICAL
+      
